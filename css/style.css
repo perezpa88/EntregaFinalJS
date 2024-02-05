@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Nunito:wght@300&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+ul{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.envoltorio{
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  background-color: red;
+}
+.logo{
+  width: 7rem;
+  border-radius: 5rem;
+  transition: .5s;
+}
+.logo:hover{
+  transform: rotateY(360deg);
+  
+}
+main{
+  background-color: aliceblue;
+  border-radius: 2rem;
+  padding: 3rem;
+
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+aside{
+  padding: 2rem;
+  padding-right: 0;
+  color: aliceblue;
+  position: sticky;
+  height: 100vh;
+  top:0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.menu-botones{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+ 
+}
+.carrito{
+  padding: 1rem;
+  margin-top:1rem;
+  
+
+}
+.NumeroDeCompra{
+  background-color: aliceblue;
+  color:red;
+  padding: .15rem .25rem;
+  border-radius: .25rem;
+}
+
+.botonProductos{
+  background-color: transparent;
+  border: 0;
+  color: aliceblue;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 1rem;
+  display: flex;
+  align-items: center; 
+}
+
+.botones.active{
+  background-color: aliceblue;
+  color: red;
+  width: 100%;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.footer{
+  color:rgb(99, 25, 25);
+  font-weight: bold; 
+}
+
+.titulo-main{
+  color:red;
+  margin-bottom: 2rem;
+}
+
+.contenedor{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.img-prop{
+  max-width: 100%;
+  width: 50rem;
+  border-radius: 2rem;
+}
+.detalles-prod{
+  background-color: red;
+  padding:.5rem;
+  color:aliceblue;
+  border-radius: 1rem;
+  margin: -1rem;
+  position: relative;
+  width: 28rem;
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+
+.agregar-prod{
+  border: 2px solid aliceblue;
+  background-color: aliceblue;
+  color:red;
+  font-weight: bold;
+  padding: .2rem;
+  text-transform: uppercase;
+  border-radius: 1rem;
+  transition: opacity 0.2s;
+}
+
+.agregar-prod:hover{
+  cursor: pointer;
+  opacity: .7;
+}
+
+/*CARRO DE COMPRAS*/
+.carroVacio,
+.compraRealizada{
+  color:red;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+.productos-carro{
+  display:flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.prod-carro{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(212, 195, 195);
+  color:red;
+  font-weight: bold;
+  text-align: center;
+  align-items: center;
+  padding: .5rem;
+  border-radius: 1rem;
+}
+
+.img-carro{
+  width: 5rem;
+  border-radius: 1rem;
+}
+
+.prod-carro small{
+  font-size: .5rem;
+}
+.Eliminar-compra{
+  border:none;
+  border-radius: .5rem;
+  padding: .25rem;
+  color:rgb(255, 255, 255);
+  background-color: rgb(102, 97, 97);
+  transition: .5s;
+}
+.Eliminar-compra:hover{
+  color:black;
+  background-color: red;
+  cursor: pointer;
+}
+.carrito-compras{
+  display:flex;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+}
+.vaciar-carro{
+  border: 0;
+  color:aliceblue;
+  background-color: gray;
+  padding: .5rem;
+  border-radius: 1rem;
+  transition: .5s;
+}
+
+.vaciar-carro:hover{
+  color:black;
+  background-color: red;
+  cursor: pointer;
+}
+.totales{
+  display: flex;
+}
+.totales-carro{
+  display: flex;
+  gap: .5rem;
+  background-color: rgb(209, 204, 204);
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  padding: .5rem;
+}
+.carrit-compra{
+  border:0;
+  background-color: red;
+  color:aliceblue;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  cursor: pointer;
+  padding: .5rem;
+  font-weight: bold;
+}
+
+.ocultar{
+  display: none;
+}

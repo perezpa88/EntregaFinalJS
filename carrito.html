@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+
+
+<body>
+  <div class="envoltorio">
+    <aside>
+      <header>
+        <h1 class="marca">Tienda Leon</h1>
+        <img class="logo" src="./img/logo.jpeg" alt="">
+      </header>
+      <nav>
+      <ul class="menu-botones">
+        <li><a class="botones volver botonProductos active" href="index.html">Continuar Comprando</a></li>
+        
+        <li><a class="botones carrito botonProductos" href="./carrito.html">Carrito</a></li>
+        
+      </ul>  
+         
+    </nav>
+    <footer class="footer">©PinchaPasion 1988</footer>
+    </aside>
+    <main>
+      <h2 class="titulo-main">Carrito de Compras</h2>
+      <div class="contenedor-carro">
+        <p id="CarroVacio"class="carroVacio">No realizaste ninguna compra 😪</p>
+        
+        <div id="contenedorProductos" class="productos-carro ocultar">
+          <div class="prod-carro">
+            <img class="img-carro" src="./img/camiseta-1.jpg" alt="">
+            <div class="carrito-titulo-nombre">
+              <small>Titulo</small>
+              <p>camiseta</p>
+            </div>
+            <div class="carrito-cant-prod">
+              <small>Cantidad</small>
+              <p>1</p>
+            </div>
+            <div class="carrito-precio-prod">
+              <small>Precio</small>
+              <p>350000</p>
+            </div>
+            <div class="carrito-precio-subtotal">
+              <small>SubTotal:</small>
+              <p>350000</p>
+            </div>
+            <button class="Eliminar-compra">Eliminar</button>
+          </div>
+          <div class="prod-carro">
+            <img class="img-carro" src="./img/camiseta-2.jpeg" alt="">
+            <div class="carrito-titulo-nombre">
+              <small>Titulo</small>
+              <p>camiseta</p>
+            </div>
+            <div class="carrito-cant-prod">
+              <small>Cantidad</small>
+              <p>1</p>
+            </div>
+            <div class="carrito-precio-prod">
+              <small>Precio</small>
+              <p>350000</p>
+            </div>
+            <div class="carrito-precio-subtotal">
+              <small>SubTotal:</small>
+              <p>350000</p>
+            </div>
+            <button class="Eliminar-compra">Eliminar</button>
+          </div>
+
+        </div>
+        <div id="carritoCompras" class="carrito-compras ocultar">
+          <div class="vaciar">
+            <button class="vaciar-carro">Vaciar Carrito</button>
+          </div>
+          <div class="totales">
+            <div class="totales-carro">
+              <p>Total:</p>
+              <p id="totales">70000</p>
+            </div>
+            <button class="carrit-compra">Comprar ahora</button>
+          </div>
+        </div>
+      
+      </div>
+      <div >
+        <p id="CompraRealizada" class="compraRealizada ocultar">Gracias por tu compra 😁</p>
+      </div>
+
+    </main>
+
+  </div>
+
+  
+
+
+
+  <script src="./js/script.js"></script>
+</body>
+</html>
