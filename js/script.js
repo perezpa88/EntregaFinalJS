@@ -1,86 +1,14 @@
-const productos=[
-  {
-    id:"Camiseta01",
-    titulo:"Camiseta01",
-    imagen:"./img/camiseta-1.jpg",
-    precio:"35000",
-    categoria:{
-      nombre:"camiseta",
-      id:"camiseta"
-    }
-  },
-  {
-    id:"Camiseta02",
-    titulo:"Camiseta02",
-    imagen:"./img/camiseta-2.jpeg",
-    precio:"35000",
-    categoria:{
-      nombre:"camiseta",
-      id:"camiseta"
-    }
-  },
-  {
-    id:"Camiseta03",
-    titulo:"Camiseta03",
-    imagen:"./img/camiseta-3.jpeg",
-    precio:"35000",
-    categoria:{
-      nombre:"camiseta",
-      id:"camiseta"
-    }
-  },
-  {
-    id:"Camiseta04",
-    titulo:"Camiseta04",
-    imagen:"./img/camiseta-4.jpeg",
-    precio:"35000",
-    categoria:{
-      nombre:"camiseta",
-      id:"camiseta"
-    }
-  },
-  {
-    id:"Camiseta05",
-    titulo:"Camiseta05",
-    imagen:"./img/camiseta-5.jpg",
-    precio:"35000",
-    categoria:{
-      nombre:"camiseta",
-      id:"camiseta"
-    }
-  },
-  {
-    id:"Camiseta06",
-    titulo:"Camiseta06",
-    imagen:"./img/camiseta-6.png",
-    precio:"35000",
-    categoria:{
-      nombre:"camiseta",
-      id:"camiseta"
-    }
-  },
-  {
-    id:"Short01",
-    titulo:"Short01",
-    imagen:"./img/short-1.jpeg",
-    precio:"15000",
-    categoria:{
-      nombre:"short",
-      id:"short"
-    }
-  },
-  {
-    id:"Short02",
-    titulo:"Short02",
-    imagen:"./img/short-2.jpg",
-    precio:"15000",
-    categoria:{
-      nombre:"short",
-      id:"short"
-    }
-  },
 
-];
+    let producto = [];
+
+    fetch("./js/ropa.json")
+      .then(response => response.json())
+      .then(data => {
+        producto = data;
+        agregarProducto(producto); 
+      })
+      .catch(error => console.error('Error:', error));
+
 //voy a declarar todos las constantes del DOM.
 const contenedorDeProductos = document.getElementById("ContenedorProductos");
 const BotonesCategorias = document.querySelectorAll(".botonProductos");
@@ -90,6 +18,21 @@ const NumCarro = document.getElementById("numCarro")
 
 function agregarProducto(productoseleccionado){
   //se van a agregar los productos en el html
+  Toastify({
+    text: "This is a toast",
+    duration: 3000,
+    destination: "https://github.com/apvarun/toastify-js",
+    newWindow: true,
+    close: true,
+    gravity: "top", // `top` or `bottom`
+    position: "right", // `left`, `center` or `right`
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    style: {
+      background: "linear-gradient(to right, #ff0000,#f0f8f )",
+    },
+    onClick: function(){} // Callback after click
+  }).showToast();
+  
   contenedorDeProductos.innerHTML="";
   productoseleccionado.forEach(producto =>{
     const div = document.createElement("div");
@@ -139,8 +82,9 @@ function botonesAgregar() {
   })
 }
 //aca se agregan los productos que se hacen click, los enviamos al carrito
-const Alcarrito =[];
 
+
+Alcarrito =[];
 
 function agregarAlCarro(e) {
   const botonid = e.currentTarget.id;

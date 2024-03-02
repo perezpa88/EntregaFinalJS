@@ -1,15 +1,19 @@
 const proEnCarrito = JSON.parse(localStorage.getitem("prodDeCarro"))
 
-const ContenedorProd = document.getElementById("contenedorProductos");
-const CarroVacio = document.getElementById("CarroVacio");
-const CarroCompras = document.getElementById("carritoCompras");
-const CompraRealizada = document.getElementById("CompraRealizada");
+const ContenedorProd = document.querySelector("#contenedorProductos");
+const CarroVacio = document.querySelector("#CarroVacio");
+const CarroCompras = document.querySelector("#carritoCompras");
+const CompraRealizada = document.querySelector("#CompraRealizada");
+let botonEliminar = document.getElementById(".Eliminar-compra" );
+
 
 if(prodEnCarrito){
   CarroVacio.classList.add("ocultar");
   CarroCompras.classList.remove("ocultar");
   ContenedorProd.classList.remove("ocultar");
   CompraRealizada.classList.add("ocultar");
+
+  CarroCompras.innerHTML="";
 
   proEnCarrito.forEach(productos => {
     const div = document.createElement("div");
@@ -41,5 +45,18 @@ if(prodEnCarrito){
   });
 
 }else{
+  CarroVacio.classList.remove("ocultar");
+  CarroCompras.classList.add("ocultar");
+  ContenedorProd.classList.add("ocultar");
+  CompraRealizada.classList.add("ocultar");
 
+}
+botonesEliminar();
+
+function botonesEliminar() {
+  botonEliminar = document.querySelectorAll(".Eliminar-compra");
+
+  botonEliminar.forEach(boton=>{
+    boton.addEventListener("click", vaciarCarrito) 
+  })
 }
